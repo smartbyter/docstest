@@ -4,7 +4,7 @@
 \usepackage[russian,english]{babel}
 
 
-
+\usepackage{hyperref}
 \usepackage{listings}
 \usepackage{xcolor}
 
@@ -12,6 +12,11 @@
 \graphicspath{{pictures/}}
 \DeclareGraphicsExtensions{.pdf,.png,.jpg}
 
+% Цвета для гиперссылок
+\definecolor{linkcolor}{HTML}{03219b} % цвет ссылок
+\definecolor{urlcolor}{HTML}{03219b} % цвет гиперссылок
+
+\hypersetup{pdfstartview=FitH,  linkcolor=linkcolor,urlcolor=urlcolor, colorlinks=true}
 
 \definecolor{listinggray}{gray}{0.9}
 \definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
@@ -48,7 +53,7 @@
 \maketitle
 
 \begin{figure}[h]
-    \center{\includegraphics[scale=0.15]{map}}
+    \center{\includegraphics[scale=2]{map}}
     \caption{Карта сокровищ}
     \label{fig:image}
 \end{figure}
@@ -155,5 +160,10 @@ LaTeX Warning: Label 'sample' multiply defined.
 
 
 Следуя им, обозначим ссылку на рисунок как\linebreak \verb|\label{fig:sample}|.
+
+\hfill
+
+\href{https://raw.githubusercontent.com/smartbyter/docstest/master/example.pdf}{Результирующий файл PDF}
+
 
 \end{document}
